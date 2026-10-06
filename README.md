@@ -8,7 +8,7 @@ o buscás alguien para sumar a un equipo remoto de automatización/IA, hablemos.
 
 ---
 
-## 🚀 Proyecto destacado
+## 🚀 Proyects
 
 ### 🏡 [Recepcionista IA Inmobiliaria](https://github.com/tahielt/recepcionista-inmobiliaria)
 Agente de WhatsApp para una inmobiliaria que **precalifica leads** y **muestra propiedades reales
