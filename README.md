@@ -1,84 +1,98 @@
-# Hola, soy Tahiel
+# Hi, I'm Tahiel
 
-**Fullstack Developer & Tech Lead** · Bariloche 🏔️ · Disponible remoto
+**Fullstack Developer & Tech Lead** · Bariloche, Argentina 🏔️ · Open to remote work
 
-Llevo proyectos de punta a punta —del código a producción: desarrollo, infraestructura,
-seguridad y **automatización con IA**— trabajando directo con el negocio. Soy responsable
-técnico de una red de turismo de la Patagonia con **54 dominios**: la operé en **WordPress
-Multisite + WooCommerce** y la migré a **Next.js**. Me muevo cómodo en los dos mundos.
+I take projects end to end, from code to production: development, infrastructure, security
+and **AI automation**, working directly with the business. I'm the technical lead of a Patagonia
+tourism network with **54 domains**: I ran it on **WordPress Multisite + WooCommerce** and
+migrated it to **Next.js**. I'm comfortable in both worlds.
 
-Mi obsesión con los agentes de IA: **que no alucinen**. Si tenés un negocio que necesita un
-agente que atienda de verdad (sin inventar precios ni stock), o buscás sumar a un equipo remoto
-de automatización/IA, hablemos.
-
----
-
-##  Lo que hago hoy
-**Responsable técnico — TurismoBariloche.ar / AdventureCenter.com.ar** (Ago 2025 – actualidad)
-
--  **WordPress Multisite (~19 subsitios):** operación diaria por SSH + **WP-CLI**,
-  **WooCommerce + Bookings** (productos, precios, disponibilidad), homes en **Elementor** y
-  sitios multi-idioma con TranslatePress.
--  **Migración de toda la red:** pasé los sitios de **WordPress Multisite + WooCommerce** a un
-  monorepo **Next.js** que sirve **54 dominios** desde una sola app (marca resuelta por dominio en
-  el middleware), con el motor de reservas Patagonia Booking como backend. WordPress quedó retirado
-  en toda la red (sept. 2026).
--  **Ecommerce & reservas:** catálogo, disponibilidad en tiempo real, cotización por tipo de
-  pasajero, alojamiento y punto de recogida sobre mapa, y checkout con link de **Mercado Pago**,
-  todo contra la API de Patagonia Booking (OAuth2).
--  **Agentes de IA en n8n (WhatsApp):** trabajé en *Magda*, agente que atiende y reactiva
-  clientes de 23 marcas (Evolution + Chatwoot). Migré el modelo a **DeepSeek V4** vía OpenRouter
-  para bajar costos, corregí respuestas falsas de “sin disponibilidad” y sumé la *repesca* de
-  ventas a medio camino con límites anti-spam. Después de la migración la rediseñé para leer
-  la API de los sitios en lugar de WooCommerce.
--  **Producción de sitios con IA:** armé una “fábrica” en **Orca** orquestando Claude Code +
-  Codex + OpenCode en paralelo → 9 homes de marcas en WordPress/Elementor producidas en lote (sumar una marca = 3 comandos).
--  **Infra:** deploys en Dokploy y Vercel, VPS con Nginx/PM2/Certbot, CI/CD con GitHub Actions,
-  DNS en Cloudflare, revalidación de caché por dominio y chequeos de salud de la API.
--  **Seguridad e incidentes:** auditorías de seguridad y respuesta a incidentes; resolví una
-  caída por cascada de wp-cron (load 34 en 2 cores) con post-mortem completo.
--  **SEO & GEO:** reescritura de catálogo para que las marcas no compitan en Google y que
-  ChatGPT, Gemini y Perplexity citen los sitios.
+My obsession with AI agents: **they must not hallucinate**. If your business needs an agent that
+actually serves customers (without inventing prices or stock), or you're building a remote
+automation/AI team, let's talk.
 
 ---
 
-## 🚀 Proyectos
+## 🚀 Featured projects
 
-###  [Recepcionista IA Inmobiliaria](https://github.com/tahielt/recepcionista-inmobiliaria)
-Agente de WhatsApp (n8n) que **precalifica leads** y **muestra propiedades reales de un catálogo**
-— nunca inventadas. **La pieza estrella: un verificador anti-alucinación** que revisa cada
-respuesta antes de enviarla; si el modelo intenta inventar un precio o un link, lo **bloquea** y
-entra un asesor humano.
+### 1. [AI Real Estate Receptionist](https://github.com/tahielt/recepcionista-inmobiliaria)
+WhatsApp agent (n8n) that **pre-qualifies leads** and **shows real properties from a catalog**,
+never invented ones. **The key piece: an anti-hallucination verifier** that checks every reply
+before it's sent. If the model tries to make up a price or a link, the reply is **blocked** and a
+human agent takes over.
 `n8n` · `AI Agent` · `OpenRouter` · `Postgres` · `Redis` · `WhatsApp`
-→ [Repo](https://github.com/tahielt/recepcionista-inmobiliaria) · 🎥 video (60-90 s): _próximamente_
+→ [Repo](https://github.com/tahielt/recepcionista-inmobiliaria) · 🎥 60–90 s demo: _coming soon_
 
-###  [TiQly](https://github.com/tahielt/TiQly-App)
-App móvil de venta de entradas para el mercado argentino. **Expo + React Native + TypeScript +
-Supabase**, con reservas atómicas en SQL anti-sobreventa, Edge Functions y pagos divididos con
-Mercado Pago validados por HMAC.
+### 2. [Vision Desktop Agent](https://github.com/tahielt/vision-desktop-agent)
+Desktop agent that plays an MMO **only by looking at the screen and pressing keys**, like a person:
+computer vision reads the health bars and a state machine decides what to do. Built for a real
+client and iterated from field feedback. The real game can't run in CI, so I wrote a **game
+simulator that reproduces the failures seen on the client's PC** (missed key presses, dead targets
+that still look alive, sit/stand desync). With the recommended settings the character **never
+died** in any scenario, including stress tests.
+`Python` · `OpenCV` · `NumPy` · `State machine` · `Simulation testing`
+→ [Repo](https://github.com/tahielt/vision-desktop-agent)
+
+### 3. [Office AI](https://github.com/tahielt/Office-AI)
+JRPG-style virtual office where a team of AI agents works in parallel: a router with structured
+output (JSON Schema) decides who to delegate to, each agent streams its answer (SSE), with SQLite
+memory and a local-first setup on Ollama with cloud fallback.
+`Next.js 16` · `React 19` · `Ollama` · `SSE` · `SQLite`
+→ [Repo](https://github.com/tahielt/Office-AI)
+
+### 4. [TiQly](https://github.com/tahielt/TiQly-App)
+Mobile ticketing app for the Argentine market. **Expo + React Native + TypeScript + Supabase**,
+with atomic SQL reservations that prevent overselling, Edge Functions, and Mercado Pago split
+payments validated with HMAC.
+`React Native` · `Expo` · `TypeScript` · `Supabase` · `Mercado Pago`
 → [Repo](https://github.com/tahielt/TiQly-App)
 
-###  [Office AI](https://github.com/tahielt/Office-AI)
-Oficina virtual estilo JRPG donde un equipo de agentes de IA trabaja en paralelo: un router con
-salida estructurada (JSON Schema) decide a quién delegar, cada agente streamea su respuesta (SSE),
-con memoria en SQLite y local-first con Ollama y fallback a la nube. **Next.js 16 · React 19**.
-→ [Repo](https://github.com/tahielt/Office-AI)
+---
+
+## 💼 What I do today
+**Technical Lead — TurismoBariloche.ar / AdventureCenter.com.ar** (Aug 2025 – present)
+
+- **Full network migration:** moved the sites from **WordPress Multisite + WooCommerce** to a
+  **Next.js** monorepo that serves **54 domains** from a single app (brand resolved by domain in
+  middleware), with the Patagonia Booking engine as the backend. WordPress was retired across the
+  whole network (Sept 2026).
+- **E-commerce & bookings:** catalog, real-time availability, quotes by passenger type,
+  accommodation and pickup point on a map, and checkout with a **Mercado Pago** payment link,
+  all against the Patagonia Booking API (OAuth2).
+- **AI agents in n8n (WhatsApp):** worked on *Magda*, an agent that serves and re-engages
+  customers for 23 brands (Evolution + Chatwoot). Moved the model to **DeepSeek V4** via OpenRouter
+  to cut costs, fixed false "no availability" replies, and added follow-ups for abandoned sales
+  with anti-spam limits. After the migration I redesigned it to read the sites' API instead of
+  WooCommerce.
+- **AI-powered site production:** built a "factory" in **Orca** orchestrating Claude Code +
+  Codex + OpenCode in parallel → 9 brand homepages in WordPress/Elementor produced in batch
+  (adding a brand = 3 commands).
+- **WordPress Multisite (~19 subsites):** day-to-day operation over SSH + **WP-CLI**,
+  **WooCommerce + Bookings** (products, pricing, availability), **Elementor** homepages and
+  multilingual sites with TranslatePress.
+- **Infra:** deploys on Dokploy and Vercel, VPS with Nginx/PM2/Certbot, CI/CD with GitHub Actions,
+  Cloudflare DNS, per-domain cache revalidation and API health checks.
+- **Security & incidents:** security audits and incident response; resolved an outage caused by a
+  wp-cron cascade (load 34 on 2 cores) with a full post-mortem.
+- **SEO & GEO:** rewrote the catalog so the brands don't compete with each other on Google and so
+  ChatGPT, Gemini and Perplexity cite the sites.
 
 ---
 
 ## 🛠️ Stack
 **Frontend:** Next.js · React · React Native (Expo) · TypeScript · shadcn/ui
-**Backend & datos:** Supabase (Postgres, Edge Functions) · REST · OAuth2 · Strapi · Contentful
+**Backend & data:** Supabase (Postgres, Edge Functions) · REST · OAuth2 · Strapi · Contentful
 **WordPress:** Multisite · WooCommerce (+Bookings) · Elementor · WP-CLI · TranslatePress
 **Infra:** Linux · Nginx · PM2 · Docker · Traefik · Dokploy · Vercel · Cloudflare · GitHub Actions
-**IA & automatización:** n8n · OpenRouter · Claude Code · Codex · Orca (multi-agente) · MCP · Chatwoot · Evolution API
-**Pagos & marketing:** Mercado Pago (split payments, webhooks) · SEO · GEO · JSON-LD · Meta Ads
+**AI & automation:** n8n · OpenRouter · Claude Code · Codex · Orca (multi-agent) · MCP · Chatwoot · Evolution API
+**Python & vision:** OpenCV · NumPy · desktop automation · simulation-based testing
+**Payments & marketing:** Mercado Pago (split payments, webhooks) · SEO · GEO · JSON-LD · Meta Ads
 
 ---
 
-## 🎓 Formación
-- **Técnico Universitario en Computación** — UNRN, Sede Andina (Bariloche), 2026
+## 🎓 Education
+- **University Technician in Computing** — UNRN, Andean campus (Bariloche), 2026
 - **Anthropic** — Claude Code in Action · MCP: Advanced Topics · AI Capabilities & Limitations · Claude 101 (2026)
 
-## 📫 Contacto
-[LinkedIn](https://www.linkedin.com/in/vdmtironi/) · ✉️ tahieltironi@gmail.com · 🌎 Español nativo · Inglés técnico
+## 📫 Contact
+[LinkedIn](https://www.linkedin.com/in/vdmtironi/) · ✉️ tahieltironi@gmail.com · 🌎 Spanish (native) · English (technical)
