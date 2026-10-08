@@ -4,7 +4,8 @@
 
 Llevo proyectos de punta a punta —del código a producción: desarrollo, infraestructura,
 seguridad y **automatización con IA**— trabajando directo con el negocio. Soy responsable
-técnico de una red de turismo de la Patagonia con **54 dominios** servidos desde un solo código.
+técnico de una red de turismo de la Patagonia con **54 dominios**: la operé en **WordPress
+Multisite + WooCommerce** y la migré a **Next.js**. Me muevo cómodo en los dos mundos.
 
 Mi obsesión con los agentes de IA: **que no alucinen**. Si tenés un negocio que necesita un
 agente que atienda de verdad (sin inventar precios ni stock), o buscás sumar a un equipo remoto
@@ -15,6 +16,9 @@ de automatización/IA, hablemos.
 ## 🧭 Lo que hago hoy
 **Responsable técnico — TurismoBariloche.ar / AdventureCenter.com.ar** (Ago 2025 – actualidad)
 
+- 🧩 **WordPress Multisite (~19 subsitios):** operación diaria por SSH + **WP-CLI**,
+  **WooCommerce + Bookings** (productos, precios, disponibilidad), homes en **Elementor** y
+  sitios multi-idioma con TranslatePress.
 - 🔁 **Migración de toda la red:** pasé los sitios de **WordPress Multisite + WooCommerce** a un
   monorepo **Next.js** que sirve **54 dominios** desde una sola app (marca resuelta por dominio en
   el middleware), con el motor de reservas Patagonia Booking como backend. WordPress quedó retirado
@@ -28,11 +32,11 @@ de automatización/IA, hablemos.
   ventas a medio camino con límites anti-spam. Después de la migración la rediseñé para leer
   la API de los sitios en lugar de WooCommerce.
 - 🏭 **Producción de sitios con IA:** armé una “fábrica” en **Orca** orquestando Claude Code +
-  Codex + OpenCode en paralelo → 9 homes de marcas producidas en lote (sumar una marca = 3 comandos).
+  Codex + OpenCode en paralelo → 9 homes de marcas en WordPress/Elementor producidas en lote (sumar una marca = 3 comandos).
 - 🧱 **Infra:** deploys en Dokploy y Vercel, VPS con Nginx/PM2/Certbot, CI/CD con GitHub Actions,
   DNS en Cloudflare, revalidación de caché por dominio y chequeos de salud de la API.
 - 🛡️ **Seguridad e incidentes:** auditorías de seguridad y respuesta a incidentes; resolví una
-  caída por cascada de cron (load 34 en 2 cores) con post-mortem completo.
+  caída por cascada de wp-cron (load 34 en 2 cores) con post-mortem completo.
 - 📈 **SEO & GEO:** reescritura de catálogo para que las marcas no compitan en Google y que
   ChatGPT, Gemini y Perplexity citen los sitios.
 
@@ -65,7 +69,7 @@ con memoria en SQLite y local-first con Ollama y fallback a la nube. **Next.js 1
 ## 🛠️ Stack
 **Frontend:** Next.js · React · React Native (Expo) · TypeScript · shadcn/ui
 **Backend & datos:** Supabase (Postgres, Edge Functions) · REST · OAuth2 · Strapi · Contentful
-**WordPress (legacy, migrado):** Multisite · WooCommerce (+Bookings) · Elementor · WP-CLI
+**WordPress:** Multisite · WooCommerce (+Bookings) · Elementor · WP-CLI · TranslatePress
 **Infra:** Linux · Nginx · PM2 · Docker · Traefik · Dokploy · Vercel · Cloudflare · GitHub Actions
 **IA & automatización:** n8n · OpenRouter · Claude Code · Codex · Orca (multi-agente) · MCP · Chatwoot · Evolution API
 **Pagos & marketing:** Mercado Pago (split payments, webhooks) · SEO · GEO · JSON-LD · Meta Ads
