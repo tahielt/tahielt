@@ -23,7 +23,7 @@ human agent takes over.
 `n8n` · `AI Agent` · `OpenRouter` · `Postgres` · `Redis` · `WhatsApp`
 → [Repo](https://github.com/tahielt/recepcionista-inmobiliaria) · 🎥 60–90 s demo: _coming soon_
 
-### 2. [Vision Desktop Agent — computer-vision game bot](https://github.com/tahielt/vision-desktop-agent)
+### 2. [Vision Game Bot](https://github.com/tahielt/vision-game-bot)
 **MMO farming bot** that plays **only by looking at the screen and pressing keys**, like a person:
 computer vision reads the health bars and a state machine decides what to do. Built for a real
 client and iterated from field feedback. The real game can't run in CI, so I wrote a **game
@@ -31,7 +31,7 @@ simulator that reproduces the failures seen on the client's PC** (missed key pre
 that still look alive, sit/stand desync). With the recommended settings the character **never
 died** in any scenario, including stress tests.
 `Python` · `Game bot` · `OpenCV` · `Computer vision` · `State machine` · `Simulation testing`
-→ [Repo](https://github.com/tahielt/vision-desktop-agent)
+→ [Repo](https://github.com/tahielt/vision-game-bot)
 
 ### 3. [Office AI](https://github.com/tahielt/Office-AI)
 JRPG-style virtual office where a team of AI agents works in parallel: a router with structured
